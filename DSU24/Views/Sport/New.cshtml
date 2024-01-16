@@ -1,0 +1,11 @@
+﻿@model DSU24.Models.NewSportViewModel;
+
+<form asp-action="New" asp-controller="sport" method="post">
+    @Html.DropDownListFor(c => c.SelectedCategory, Model.Categories, "Välj en kategori")
+    <div>
+        <label for="Name">Name:</label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+<button type="submit">Spara</button>
+</form>

@@ -19,6 +19,7 @@ namespace DSU24.Controllers
 
         public IActionResult Index()
         {
+            // hämta från api
             return View();
         }
 

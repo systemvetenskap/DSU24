@@ -1,8 +1,13 @@
-﻿@{
+﻿@model DSU24.Models.DisplaySportViewModel;
+
+@{
     ViewData["Title"] = "Sport och lek";
 }
 
 <h2>En sportsida</h2>
-@section scripts{
-    <script src="/js/erik.js"></script>
+
+@foreach(var sport in Model.Sports)
+{
+    <h3>@sport</h3>
 }
+
