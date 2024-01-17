@@ -1,0 +1,31 @@
+https://opendata-download-metfcst.smhi.se
+
+63.177673, 14.651646
+
+Hitta url
+lägg till rätt parametrar
+
+Identifiera response
+måsvinge eller hakparentes
+--> objekt
+
+hakparentes --> array
+
+Lägg svaret i en DTO, data transfer object
+
+dto är en vymodell utan vyer och metoder
+
+******************
+Partiella Vyer
+
+partial view
+_WeatherInfoView --> kan ha egna modeller. Har (oftast) ingen controller
+
+View Component
+--> har en controller
+--> kan ta emot parametrar om du vill
+--> kan rendera direkt i vyn, eller ropas på via controllern
+
+**********
+Använd interface
+skjut in alla beroenden via dependency injection

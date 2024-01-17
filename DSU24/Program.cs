@@ -1,7 +1,10 @@
+using DSU24.DAL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IApiRepository, MockApiRepository>();
 
 var app = builder.Build();
 
