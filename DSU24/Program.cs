@@ -1,10 +1,17 @@
 using DSU24.DAL;
+using DSU24.Models.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
+string conn = builder.Configuration["ConnectionStrings:Default"];
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IApiRepository, MockApiRepository>();
+builder.Services.AddScoped<IApiRepository, ApiRepository>();
+builder.Services.AddScoped<IDbRepository, DbRepository>();
+
+builder.Services.AddDbContext<SportDbContext>(
+                o => o.UseNpgsql(conn));
+
 
 var app = builder.Build();
 

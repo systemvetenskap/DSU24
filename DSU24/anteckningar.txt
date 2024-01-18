@@ -29,3 +29,15 @@ View Component
 **********
 Använd interface
 skjut in alla beroenden via dependency injection
+
+
+**********
+EF entity framework
+https://learn.microsoft.com/en-us/ef/core/get-started/overview/install
+
+Database first
+--> Code first
+
+
+"Develop": "Server=127.0.0.1;Port=5432;Database=dsu24;User Id=postgres;Password="
+
